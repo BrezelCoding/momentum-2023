@@ -1,3 +1,426 @@
+/* Global */
+:root {
+  /* Color  */
+  --color-white: #ffffff;
+  --color-gray: rgb(82, 82, 82);
+
+  /* Font size */
+  --font-large: 150px;
+  --font-medium: 40px;
+  --font-regular: 25px;
+  --font-small: 20px;
+  --font-micro: 18px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --wight-semi-bold: 600;
+  --wight-regular: 400;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+  color: var(--color-white);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+}
+
+ul {
+  list-style: circle;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  color: var(--color-white);
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#clock {
+  opacity: 80%;
+  margin-bottom: 30px;
+}
+
+.login__input {
+  background-color: transparent;
+  padding: 7px 15px;
+  font-size: var(--font-regular);
+  border-radius: 50px;
+  border-style: dotted;
+  border-color: var(--color-white);
+  border-width: 3px;
+  width: 260px;
+}
+
+.login__input::placeholder {
+  color: var(--color-white);
+}
+
+.login__btn {
+  margin-left: 10px;
+  padding: 7px 10px;
+  color: var(--color-gray);
+  font-size: var(--font-regular);
+  border-radius: 50px;
+  border-color: transparent;
+  opacity: 70%;
+}
+
 .hidden {
   display: none;
+}
+
+.visible {
+  font-size: var(--font-medium);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.todo__input {
+  margin-top: 50px;
+  background-color: transparent;
+  font-size: var(--font-small);
+  width: 550px;
+  border-width: 3px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-bottom-color: white;
+}
+
+.todo__input::placeholder {
+  color: var(--color-white);
+}
+
+#todo-list {
+  margin-top: 35px;
+  padding-left: 0px;
+  text-align: left;
+  width: 530px;
+  font-size: var(--font-small);
+  overflow-wrap: break-word;
+  overflow-y: scroll;
+  height: 15%;
+}
+
+#todo-list::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.todo__btn {
+  margin-left: 12px;
+  background-color: transparent;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: var(--color-white);
+  width: 23px;
+  padding: 0px 1px;
+  opacity: 60%;
+}
+
+#quote {
+  margin-top: 30px;
+  font-style: italic;
+}
+
+#weather {
+  position: absolute;
+  font-size: var(--font-small);
+  font-style: italic;
+  align-items: right;
+  top: 10px;
+  left: 82%;
+}
+
+/* For below 1395px screen width */
+@media screen and (max-width: 1395px) {
+  :root {
+    /* Font size */
+    --font-large: 120px;
+    --font-medium: 30px;
+    --font-regular: 20px;
+    --font-small: 18px;
+    --font-micro: 15px;
+  }
+
+  body {
+    background: fixed;
+    background-position: center;
+    overflow-y: hidden;
+  }
+
+  .container {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #clock {
+    opacity: 80%;
+    margin-bottom: 30px;
+  }
+
+  .login__input {
+    background-color: transparent;
+    padding: 7px 15px;
+    font-size: var(--font-regular);
+    border-radius: 50px;
+    border-style: dotted;
+    border-color: var(--color-white);
+    border-width: 3px;
+    width: 260px;
+  }
+
+  .login__input::placeholder {
+    color: var(--color-white);
+  }
+
+  .login__btn {
+    margin-left: 10px;
+    padding: 7px 10px;
+    color: var(--color-gray);
+    font-size: var(--font-regular);
+    border-radius: 50px;
+    border-color: transparent;
+    opacity: 70%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .visible {
+    font-size: var(--font-medium);
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .todo__input {
+    margin-top: 50px;
+    background-color: transparent;
+    font-size: var(--font-small);
+    width: 480px;
+    border-width: 3px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+  }
+
+  .todo__input::placeholder {
+    color: var(--color-white);
+  }
+
+  #todo-list {
+    margin-top: 35px;
+    padding-left: 0px;
+    text-align: left;
+    width: 470px;
+    font-size: var(--font-small);
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    height: 26%;
+  }
+
+  #todo-list::-webkit-scrollbar {
+    background-color: transparent;
+  }
+
+  .todo__btn {
+    margin-left: 12px;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: var(--color-white);
+    width: 23px;
+    padding: 0px 1px;
+    opacity: 60%;
+  }
+
+  #quote {
+    margin-top: 60px;
+    font-style: italic;
+    font-size: var(--font-micro);
+  }
+
+  #weather {
+    position: absolute;
+    font-size: var(--font-small);
+    font-style: italic;
+    align-items: right;
+    top: 0px;
+    left: 82%;
+  }
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 70px;
+    --font-medium: 30px;
+    --font-regular: 18px;
+    --font-small: 15px;
+    --font-micro: 12px;
+  }
+
+  body {
+    background: fixed;
+    background-position: center;
+    overflow-y: hidden;
+  }
+
+  .container {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #clock {
+    opacity: 80%;
+    margin-bottom: 30px;
+  }
+
+  .login__input {
+    background-color: transparent;
+    padding: 5px 12px;
+    font-size: var(--font-small);
+    border-radius: 50px;
+    border-style: dotted;
+    border-color: var(--color-white);
+    border-width: 3px;
+    width: 165px;
+  }
+
+  .login__input::placeholder {
+    color: var(--color-white);
+  }
+
+  .login__btn {
+    margin-left: 5px;
+    padding: 5px 8px;
+    color: var(--color-gray);
+    font-size: var(--font-small);
+    border-radius: 50px;
+    border-color: transparent;
+    opacity: 70%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .visible {
+    font-size: var(--font-medium);
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .todo__input {
+    margin-top: 20px;
+    padding-left: 0px;
+    background-color: transparent;
+    font-size: var(--font-small);
+    display: flex;
+    justify-content: center;
+    width: 225px;
+    border-width: 3px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+  }
+
+  .todo__input::placeholder {
+    color: var(--color-white);
+  }
+
+  #todo-list {
+    margin-top: 20px;
+    padding-left: 0px;
+    text-align: left;
+    width: 70%;
+    font-size: var(--font-small);
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    height: 30%;
+  }
+
+  #todo-list::-webkit-scrollbar {
+    background-color: transparent;
+  }
+
+  .todo__btn {
+    margin-left: 12px;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: var(--color-white);
+    width: 23px;
+    padding: 0px 1px;
+    opacity: 60%;
+  }
+
+  #quote {
+    position: absolute;
+    margin-top: 10px;
+    top: 84%;
+    padding: 8px;
+    font-style: italic;
+    font-size: var(--font-micro);
+  }
+
+  #weather {
+    position: absolute;
+    font-size: var(--font-small);
+    font-style: italic;
+    top: 0px;
+    left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

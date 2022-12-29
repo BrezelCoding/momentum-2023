@@ -1,3 +1,5 @@
+'use strict';
+
 const toDoForm = document.querySelector('#todo-form');
 const toDoInput = document.querySelector('#todo-form input');
 const toDoList = document.querySelector('#todo-list');
@@ -26,6 +28,7 @@ function paintToDo(newTodo) {
 
   const button = document.createElement('button');
   button.innerText = '❌';
+  button.classList.add('todo__btn');
   button.addEventListener('click', deleteToDo);
 
   li.appendChild(span);

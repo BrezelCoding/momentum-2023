@@ -1,3 +1,5 @@
+'use strict';
+
 const loginForm = document.querySelector('#login-form');
 const loginInput = document.querySelector('#login-form input');
 const greeting = document.querySelector('#greeting');
@@ -14,8 +16,9 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`;
+  greeting.innerText = `Hello ${username} !`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting.classList.add('visible');
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);

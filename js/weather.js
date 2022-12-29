@@ -1,3 +1,5 @@
+'use strict';
+
 const API_KEY = '403484eb77eb90aa3ead7aaf99498745';
 
 function onGeoSucess(position) {
@@ -10,7 +12,7 @@ function onGeoSucess(position) {
       const weather = document.querySelector('.weather');
       const city = document.querySelector('.city');
       const temp = parseInt(data.main.temp);
-      weather.innerText = `${data.weather[0].main}, ${temp}℃,`;
+      weather.innerText = `${data.weather[0].main}, ${temp}℃ `;
       city.innerText = `${data.name}`;
     });
 }

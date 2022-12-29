@@ -1,3 +1,5 @@
+'use strict';
+
 const quotes = [
   {
     quote: 'I never dreamed about success, I worked for it',
@@ -53,4 +55,4 @@ const author = document.querySelector('.authorText');
 
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 quote.innerHTML = todaysQuote.quote;
-author.innerHTML = todaysQuote.author;
+author.innerHTML = ` - ${todaysQuote.author} -`;

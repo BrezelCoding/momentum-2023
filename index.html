@@ -4,43 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+
     <title>Momentum App</title>
   </head>
   <body>
-    <!-- Login form -->
-    <form class="hidden" id="login-form">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <button>Log In</button>
-    </form>
+    <div class="container">
+      <!-- Clock -->
+      <h1 id="clock">00:00</h1>
 
-    <!-- Clock -->
-    <h1 id="clock">00:00</h1>
+      <!-- Login form -->
+      <form class="hidden" id="login-form">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?"
+          class="login__input"
+        />
+        <button class="login__btn">Enter</button>
+      </form>
 
-    <!-- Greeting -->
-    <h2 class="hidden" id="greeting"></h2>
+      <!-- Greeting -->
+      <h2 class="hidden" id="greeting"></h2>
 
-    <!-- To do list -->
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
+      <!-- To do list -->
+      <form id="todo-form">
+        <input
+          type="text"
+          placeholder="Write a To do and Press Enter 😊"
+          required
+          class="todo__input"
+        />
+      </form>
+      <ul id="todo-list"></ul>
 
-    <!-- Quote -->
-    <div id="quote">
-      <span class="quoteText"></span>
-      <span class="authorText"></span>
-    </div>
+      <!-- Quote -->
+      <div id="quote">
+        <span class="quoteText"></span>
+        <span class="authorText"></span>
+      </div>
 
-    <!-- Weather -->
-    <div id="weather">
-      <span class="weather"></span>
-      <span class="city"></span>
+      <!-- Weather -->
+      <div id="weather">
+        <span class="weather"></span>
+        <span class="city"></span>
+      </div>
     </div>
 
     <script src="./js/greetings.js" defer></script>

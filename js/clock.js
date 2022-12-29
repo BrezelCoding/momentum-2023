@@ -1,3 +1,5 @@
+'use strict';
+
 const clock = document.querySelector('#clock');
 
 function getClock() {
