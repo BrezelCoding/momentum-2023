@@ -215,6 +215,11 @@ h1 {
     opacity: 70%;
   }
 
+  .login__btn:hover {
+    transform: scale(0.95);
+    transition: all 200ms ease-out;
+  }
+
   .hidden {
     display: none;
   }
